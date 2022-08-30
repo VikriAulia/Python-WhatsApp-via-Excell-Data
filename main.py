@@ -11,7 +11,10 @@ def send_message_immediately():
 
     pywhatkit.sendwhatmsg_instantly(
         phone_no=whats_app_number,
-        message=message
+        message=message,
+        wait_time=20,
+        tab_close=True,
+        close_time=3,
     )
 
 
@@ -30,11 +33,25 @@ def send_message_at_certain_time():
         time_min=minutes
     )
 
+#sending few message and close the tab
+def send_few_message_and_closeTab(number,message):
+    send_time = 5
+    close_tab = True
+    closeTabTime = 10
+
+    pywhatkit.sendwhatmsg_instantly(
+        phone_no=number,
+        message=message,
+        wait_time=send_time,
+        tab_close=close_tab,
+        close_time=closeTabTime
+    )
 
 # Choose which function you want to use
 def main():
     send_message_immediately()
-    send_message_at_certain_time()
+    #send_message_at_certain_time()
+    #send_few_message_and_closeTab()
 
 
 if __name__ == "__main__":
