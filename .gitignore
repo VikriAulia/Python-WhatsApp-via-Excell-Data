@@ -1,2 +1,5 @@
 #ignore all .xlsx files
 *.xlsx
+
+# ignore ALL files in ANY directory named excel
+excel/
