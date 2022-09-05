@@ -1,5 +1,8 @@
+from email import message
+from tkinter.tix import Tree
 import pywhatkit
 import pandas as pd
+import arguing
 # import os # To hide the sender's number
 
 # excel cols to access
@@ -55,6 +58,9 @@ def send_few_message_and_closeTab(number,message):
 
 # Choose which function you want to use
 def main():
+    excel = arguing.set('--excel', mandatory=True, help_message='excel file data source')
+    phoneNumber = arguing.set('--phoneNumberHeader', mandatory=True, help_message='Name of header for phone number colum')
+    message = arguing.set('--messageHeader',mandatory=True, help_message='Header name of colom message to send')
     send_message_immediately()
     #send_message_at_certain_time()
     #send_few_message_and_closeTab()
