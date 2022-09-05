@@ -29,3 +29,5 @@ There are filters!
 cscrape --url https://example.com --tag "p" --filter "node.attrs"
                                    |You can use Tags or Selector
 ```
+
+## Example Excel Files
